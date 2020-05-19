@@ -2,6 +2,7 @@
 
 public class Player : MonoBehaviour
 {
+    // The speed of the player
     public float _speed;
 
     // Update is called once per frame
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // Combine them into a Vector3
-        // Vector3 can be initialised with only the x and y -axis, 
+        // Vector3 can be initialised with only the x and y -axis,
         // which we will do since we have no need for the z-axis
         Vector3 input = new Vector3(horizontalInput, verticalInput);
 
