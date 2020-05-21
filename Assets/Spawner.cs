@@ -21,11 +21,15 @@ public class Spawner : MonoBehaviour
             _currentTime = 0f;
 
             // Instantiate spawns the given object. The arguments are as follows:
-            // _prefab is the gameobject it has been given in the inspector
-            // second one is the position you want to spawn it. I have entered the position of the spawner
-            // third one is its rotation. Quaternion.identity is the "no rotation" quaternion 
+            // _prefab is the gameobject the spawner has been given in the inspector
+            // I have entered the position of the spawner
+            // Quaternion.identity is the "no rotation" quaternion 
             // (you don't need to completely understand quaternions yet)
-            Instantiate(_prefab, transform.position, Quaternion.identity);
+            Instantiate(
+                    original: _prefab,
+                    position: transform.position,
+                    rotation: Quaternion.identity
+                );
         }
     }
 }
