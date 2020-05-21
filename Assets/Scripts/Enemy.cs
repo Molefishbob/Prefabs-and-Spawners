@@ -15,31 +15,21 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check if the enemy is moving left
-        if (_isMovingLeft)
-        {
-            // Move the enemy to the left according to his speed. Remember to always use Time.DeltaTime!
-            transform.position -= new Vector3(_speed, 0) * Time.deltaTime;
+        // Check the direction the enemy is moving
+        // if ()
+        // {
+        // Move the enemy to the correct direction according to his speed. Remember to always use Time.DeltaTime!
 
-            // Check if the enemy is beyond its minimum X-axis value.
-            if (_minX > transform.position.x)
-            {
-                // If it is, make the moving left boolean false and move the player to its minimum X-axis value.
-                _isMovingLeft = false;
-                transform.position = new Vector3(_minX, transform.position.y);
-            }
-        }
-        else
-        {
-            // Move the enemy to the right according to his speed. Remember to always use Time.DeltaTime!
-            transform.position += new Vector3(_speed, 0) * Time.deltaTime; 
-            
-            if (_maxX < transform.position.x)
-            {
-                // If it is, make the moving left boolean true and move the player to its maximum X-axis value.
-                _isMovingLeft = true;
-                transform.position = new Vector3(_maxX, transform.position.y);
-            }
-        }
+        // Check IF the enemy is still within its moving area
+        // If its not, make it turn around
+
+        // }
+        //else
+        // {
+            // Move the enemy to the correct direction according to his speed. Remember to always use Time.DeltaTime!
+
+            // Check IF the enemy is still within its moving area
+                // If its not, make it turn around
+        // }
     }
 }
